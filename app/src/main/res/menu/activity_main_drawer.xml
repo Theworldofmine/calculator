@@ -6,7 +6,7 @@
         <item android:title="计算器">
             <menu>
                 <item
-                    android:id="@+id/nav_home"
+                    android:id="@+id/main_calculator"
                     android:title="@string/menu_home" />
             </menu>
         </item>
@@ -15,13 +15,13 @@
     <item android:title="换算">
         <menu>
             <item
-                android:id="@+id/nav_volume"
+                android:id="@+id/main_volume"
                 android:title="@string/menu_volume" />
             <item
-                android:id="@+id/nav_length"
+                android:id="@+id/main_length"
                 android:title="@string/menu_length" />
             <item
-                android:id="@+id/nav_system"
+                android:id="@+id/main_system"
                 android:title="@string/menu_system" />
         </menu>
     </item>

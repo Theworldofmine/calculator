@@ -31,8 +31,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:entries="@array/array_sys"
-        style="@style/common_spinner"
-        android:popupTheme="@style/common_spinner"
         android:layout_marginLeft="45dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sys_textView_1" />
@@ -42,8 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:entries="@array/array_sys"
-        style="@style/common_spinner"
-        android:popupTheme="@style/common_spinner"
+
         android:layout_marginLeft="45dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sys_textView_2" />
@@ -51,7 +48,7 @@
     <Button
         android:id="@+id/sys_btn_0"
         style="@style/buttonLandStyle"
-        android:layout_height="85dp"
+        android:layout_height="101dp"
         android:background="@drawable/button_gray_background"
         android:text="0"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -60,7 +57,7 @@
     <Button
         android:id="@+id/sys_btn_point"
         style="@style/buttonLandStyle"
-        android:layout_height="85dp"
+        android:layout_height="101dp"
         android:text="."
         android:background="@drawable/button_gray_background"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -69,7 +66,7 @@
     <Button
         android:id="@+id/sys_btn_c"
         style="@style/buttonLandStyle"
-        android:layout_height="85dp"
+        android:layout_height="101dp"
         android:background="@drawable/button_gray_background"
         android:text="c"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -79,7 +76,7 @@
     <Button
         android:id="@+id/sys_btn_d"
         style="@style/buttonLandStyle"
-        android:layout_height="85dp"
+        android:layout_height="101dp"
         android:background="@drawable/button_gray_background"
         android:text="d"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -89,7 +86,7 @@
     <Button
         android:id="@+id/sys_btn_e"
         style="@style/buttonLandStyle"
-        android:layout_height="85dp"
+        android:layout_height="101dp"
         android:background="@drawable/button_gray_background"
         android:text="e"
         app:layout_constraintBottom_toTopOf="@id/sys_btn_d"
@@ -99,7 +96,7 @@
     <Button
         android:id="@+id/sys_btn_f"
         style="@style/buttonLandStyle"
-        android:layout_height="85dp"
+        android:layout_height="101dp"
         android:background="@drawable/button_gray_background"
         android:text="f"
         app:layout_constraintBottom_toTopOf="@id/sys_btn_e"
@@ -109,7 +106,7 @@
     <Button
         android:id="@+id/sys_btn_1"
         style="@style/buttonLandStyle"
-        android:layout_height="85dp"
+        android:layout_height="101dp"
         android:background="@drawable/button_gray_background"
         android:text="1"
         app:layout_constraintBottom_toTopOf="@id/sys_btn_0"
@@ -119,7 +116,7 @@
     <Button
         android:id="@+id/sys_btn_2"
         style="@style/buttonLandStyle"
-        android:layout_height="85dp"
+        android:layout_height="101dp"
         android:background="@drawable/button_gray_background"
         android:text="2"
         app:layout_constraintBottom_toTopOf="@id/sys_btn_0"
@@ -129,7 +126,7 @@
     <Button
         android:id="@+id/sys_btn_3"
         style="@style/buttonLandStyle"
-        android:layout_height="85dp"
+        android:layout_height="101dp"
         android:background="@drawable/button_gray_background"
         android:text="3"
         app:layout_constraintBottom_toTopOf="@id/sys_btn_point"
@@ -139,7 +136,7 @@
     <Button
         android:id="@+id/sys_btn_4"
         style="@style/buttonLandStyle"
-        android:layout_height="85dp"
+        android:layout_height="101dp"
         android:background="@drawable/button_gray_background"
         android:text="4"
 
@@ -150,7 +147,7 @@
     <Button
         android:id="@+id/sys_btn_5"
         style="@style/buttonLandStyle"
-        android:layout_height="85dp"
+        android:layout_height="101dp"
         android:background="@drawable/button_gray_background"
         android:text="5"
 
@@ -161,7 +158,7 @@
     <Button
         android:id="@+id/sys_btn_6"
         style="@style/buttonLandStyle"
-        android:layout_height="85dp"
+        android:layout_height="101dp"
         android:background="@drawable/button_gray_background"
         android:text="6"
         app:layout_constraintBottom_toTopOf="@id/sys_btn_3"
@@ -171,7 +168,7 @@
     <Button
         android:id="@+id/sys_btn_7"
         style="@style/buttonLandStyle"
-        android:layout_height="85dp"
+        android:layout_height="101dp"
         android:background="@drawable/button_gray_background"
         android:text="7"
         app:layout_constraintBottom_toTopOf="@id/sys_btn_4"
@@ -181,7 +178,7 @@
     <Button
         android:id="@+id/sys_btn_8"
         style="@style/buttonLandStyle"
-        android:layout_height="85dp"
+        android:layout_height="101dp"
         android:background="@drawable/button_gray_background"
         android:text="8"
         app:layout_constraintBottom_toTopOf="@id/sys_btn_5"
@@ -191,7 +188,7 @@
     <Button
         android:id="@+id/sys_btn_9"
         style="@style/buttonLandStyle"
-        android:layout_height="85dp"
+        android:layout_height="101dp"
         android:background="@drawable/button_gray_background"
         android:text="9"
         app:layout_constraintBottom_toTopOf="@id/sys_btn_6"
@@ -201,7 +198,7 @@
     <ImageButton
         android:id="@+id/sys_btn_del"
         style="@style/buttonLandStyle"
-        android:layout_height="85dp"
+        android:layout_height="101dp"
         android:translationZ="2dp"
         android:background="@drawable/button_gray_background"
         app:layout_constraintBottom_toTopOf="@id/sys_btn_ce"
@@ -212,7 +209,7 @@
         android:id="@+id/sys_btn_ce"
         style="@style/buttonLandStyle"
         android:background="@drawable/button_gray_background"
-        android:layout_height="85dp"
+        android:layout_height="101dp"
         android:text="ce"
         app:layout_constraintBottom_toTopOf="@id/sys_btn_a"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -221,7 +218,7 @@
         android:id="@+id/sys_btn_a"
         style="@style/buttonLandStyle"
         android:background="@drawable/button_gray_background"
-        android:layout_height="85dp"
+        android:layout_height="101dp"
         android:text="a"
         app:layout_constraintBottom_toTopOf="@id/sys_btn_b"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -230,14 +227,14 @@
         android:id="@+id/sys_btn_b"
         style="@style/buttonLandStyle"
         android:background="@drawable/button_gray_background"
-        android:layout_height="85dp"
+        android:layout_height="101dp"
         android:text="b"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
     <Button
         android:id="@+id/sys_btn_10"
         style="@style/buttonLandStyle"
-        android:layout_height="85dp"
+        android:layout_height="101dp"
         android:background="@drawable/button_gray_background"
         app:layout_constraintBottom_toTopOf="@id/sys_btn_4"
         app:layout_constraintEnd_toStartOf="@id/sys_btn_7"

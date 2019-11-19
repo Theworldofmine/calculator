@@ -86,7 +86,7 @@
         android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@id/button_sin"
         app:layout_constraintEnd_toStartOf="@id/button_ln"
-    />
+        />
 
     <Button
         android:id="@+id/button_ln"
@@ -148,22 +148,22 @@
     <Button
         android:id="@+id/button_cos"
         style="@style/buttonLandStyle"
-        android:textColor="#585858"
         android:background="@drawable/button_dark_gray"
         android:text="cos"
         android:textAllCaps="false"
+        android:textColor="#585858"
         app:layout_constraintBottom_toTopOf="@id/button_brackets_right"
-        app:layout_constraintEnd_toStartOf="@id/button_tan"/>
+        app:layout_constraintEnd_toStartOf="@id/button_tan" />
 
     <Button
         android:id="@+id/button_tan"
         style="@style/buttonLandStyle"
-        android:textColor="#585858"
         android:background="@drawable/button_dark_gray"
         android:text="tan"
         android:textAllCaps="false"
+        android:textColor="#585858"
         app:layout_constraintBottom_toTopOf="@id/button_pi"
-        app:layout_constraintEnd_toStartOf="@id/button_1"/>
+        app:layout_constraintEnd_toStartOf="@id/button_1" />
 
     <Button
         android:id="@+id/button_ce"
@@ -173,7 +173,7 @@
         android:textColor="@color/colorBlue"
         app:layout_constraintEnd_toStartOf="@id/button_div"
         app:layout_constraintBottom_toTopOf="@id/button_7"
-    />
+        />
 
     <Button
         android:id="@+id/button_div"
@@ -191,7 +191,7 @@
         android:text="7"
         app:layout_constraintBottom_toTopOf="@id/button_4"
         app:layout_constraintEnd_toStartOf="@id/button_8"
-    />
+        />
 
     <Button
         android:id="@+id/button_8"
@@ -200,7 +200,7 @@
         android:text="8"
         app:layout_constraintBottom_toTopOf="@id/button_5"
         app:layout_constraintEnd_toStartOf="@id/button_9"
-    />
+        />
 
     <Button
         android:id="@+id/button_9"
@@ -242,7 +242,7 @@
         android:text="5"
         app:layout_constraintEnd_toStartOf="@id/button_6"
         app:layout_constraintBottom_toTopOf="@id/button_2"
-    />
+        />
 
     <Button
         android:id="@+id/button_6"
@@ -251,7 +251,7 @@
         android:text="6"
         app:layout_constraintEnd_toStartOf="@id/button_plus"
         app:layout_constraintBottom_toTopOf="@id/button_3"
-    />
+        />
 
     <Button
         android:id="@+id/button_sub"
@@ -261,7 +261,7 @@
         android:textColor="@color/colorBlue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/button_plus"
-    />
+        />
     <Button
         android:id="@+id/button_1"
         style="@style/buttonLandStyle"
@@ -269,7 +269,7 @@
         android:text="1"
         app:layout_constraintEnd_toStartOf="@id/button_2"
         app:layout_constraintBottom_toTopOf="@id/button_pm"
-    />
+        />
 
     <Button
         android:id="@+id/button_2"
@@ -278,7 +278,7 @@
         android:text="2"
         app:layout_constraintEnd_toStartOf="@id/button_3"
         app:layout_constraintBottom_toTopOf="@id/button_0"
-    />
+        />
 
     <Button
         android:id="@+id/button_3"
@@ -287,7 +287,7 @@
         android:text="3"
         app:layout_constraintEnd_toStartOf="@id/button_equal"
         app:layout_constraintBottom_toTopOf="@id/button_point"
-    />
+        />
 
     <Button
         android:id="@+id/button_plus"
@@ -297,7 +297,7 @@
         android:textColor="@color/colorBlue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/button_equal"
-    />
+        />
 
     <Button
         android:id="@+id/button_pm"
@@ -306,7 +306,7 @@
         android:text="±"
         app:layout_constraintEnd_toStartOf="@id/button_0"
         app:layout_constraintBottom_toBottomOf="parent"
-    />
+        />
 
 
     <Button
@@ -316,7 +316,7 @@
         android:text="0"
         app:layout_constraintEnd_toStartOf="@id/button_point"
         app:layout_constraintBottom_toBottomOf="parent"
-    />
+        />
 
     <Button
         android:id="@+id/button_point"
@@ -325,7 +325,7 @@
         android:text="."
         app:layout_constraintRight_toLeftOf="@id/button_equal"
         app:layout_constraintBottom_toBottomOf="parent"
-    />
+        />
 
     <Button
         android:id="@+id/button_equal"
@@ -336,6 +336,6 @@
         android:text="="
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-    />
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
