@@ -1,4 +1,4 @@
-package com.example.calculator.volume;
+package com.example.calculator.length;
 
 import android.os.Bundle;
 import android.text.Editable;
@@ -17,50 +17,56 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.example.calculator.R;
-import com.example.utils.Convertvol;
+import com.example.utils.Convertlen;
 
-public class volumeFragment extends Fragment implements View.OnClickListener{
+public class lengthFragment extends Fragment implements View.OnClickListener{
 
-    private volumeViewModel volumeViewModel;
-    private static final String TAG = "volumeFragment";
+    private lengthViewModel lengthViewModel;
+
+    //按钮的id
+    private int[] button_ids = new int[]{
+            R.id.len_btn_0, R.id.len_btn_1, R.id.len_btn_2, R.id.len_btn_3, R.id.len_btn_4, R.id.len_btn_5, R.id.len_btn_6,
+            R.id.len_btn_7, R.id.len_btn_8, R.id.len_btn_9, R.id.len_btn_point, R.id.len_btn_ce};
+    //按钮数组
+    private Button[] buttons = new Button[12];
     //转换的数值
     private TextView textView_1, textView_2;
     //表达式
     private String expression = "0";
     //控制小数点
     private boolean ctrl_point = true;
-    //按钮的id
-    private int[] button_ids = new int[]{
-            R.id.vol_btn_0, R.id.vol_btn_1, R.id.vol_btn_2, R.id.vol_btn_3, R.id.vol_btn_4, R.id.vol_btn_5, R.id.vol_btn_6,
-            R.id.vol_btn_7, R.id.vol_btn_8, R.id.vol_btn_9, R.id.vol_btn_point, R.id.vol_btn_ce};
-    //按钮数组
-    private Button[] buttons = new Button[12];
-    private Convertvol convertVol;
-    private Spinner spinner_1, spinner_2;
-    private String spinner_1_selected, spinner_2_selected;
+    //需要转换的单位
+    private Spinner spinner_before;
+    private String str_sp_before = "米";
+    //转换的目标单位
+    private Spinner spinner_after;
+    private String str_sp_after = "厘米";
+    private Convertlen translateLength;
+    private static final String TAG = "lengthFragment";
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        volumeViewModel =
-                ViewModelProviders.of(this).get(volumeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_volume, container, false);
+        View root = inflater.inflate(R.layout.fragment_length, container, false);
         return root;
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
         //设置按钮的点击事件
         for (int i = 0; i < buttons.length; i++) {
             buttons[i] = getActivity().findViewById(button_ids[i]);
             buttons[i].setOnClickListener(this);
         }
 
-        ImageButton button_del = getActivity().findViewById(R.id.vol_btn_del);
+        textView_1 = getActivity().findViewById(R.id.len_textView_1);
+        textView_2 = getActivity().findViewById(R.id.len_textView_2);
+
+        translateLength = new Convertlen();
+
+        ImageButton button_del = getActivity().findViewById(R.id.len_btn_del);
         button_del.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,23 +83,15 @@ public class volumeFragment extends Fragment implements View.OnClickListener{
             }
         });
 
-        textView_1 = getActivity().findViewById(R.id.vol_textView_1);
-        textView_2 = getActivity().findViewById(R.id.vol_textView_2);
-        convertVol = new Convertvol();
-
-        spinner_1 = getActivity().findViewById(R.id.vol_spinner_first);
-        spinner_2 = getActivity().findViewById(R.id.vol_spinner_second);
-        spinner_1.setSelection(2);
-        spinner_2.setSelection(0);
-        spinner_1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinner_before = getActivity().findViewById(R.id.spinner_first);
+        spinner_before.setSelection(4);
+        spinner_before.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                spinner_1_selected = spinner_1.getSelectedItem().toString();
-                Log.d(TAG, "onItemSelected: " +spinner_1_selected);
-                if (spinner_2_selected != null) {
-                    String s = convertVol.getResult(expression, spinner_1_selected, spinner_2_selected);
+                str_sp_before = spinner_before.getSelectedItem().toString();
+                if (str_sp_after != null) {
+                    String s = translateLength.getResult(expression, str_sp_before, str_sp_after);
                     textView_2.setText(s);
-                    Log.d(TAG, "onItemSelected: spinner2selected is null" );
                 }
             }
 
@@ -102,11 +100,13 @@ public class volumeFragment extends Fragment implements View.OnClickListener{
 
             }
         });
-        spinner_2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinner_after = getActivity().findViewById(R.id.spinner_second);
+        spinner_after.setSelection(3);
+        spinner_after.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                spinner_2_selected = spinner_2.getSelectedItem().toString();
-                String s = convertVol.getResult(expression, spinner_1_selected, spinner_2_selected);
+                str_sp_after = spinner_after.getSelectedItem().toString();
+                String s = translateLength.getResult(expression, str_sp_before, str_sp_after);
                 textView_2.setText(s);
             }
 
@@ -119,12 +119,12 @@ public class volumeFragment extends Fragment implements View.OnClickListener{
         TextWatcher textWatcher = new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                
+
             }
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                String s = convertVol.getResult(expression, spinner_1_selected, spinner_2_selected);
+                String s = translateLength.getResult(expression, str_sp_before, str_sp_after);
                 textView_2.setText(s);
             }
 
@@ -142,11 +142,11 @@ public class volumeFragment extends Fragment implements View.OnClickListener{
                 }
             }
         };
-        
+
         TextWatcher textWatcher1 = new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                
+
             }
 
             @Override
@@ -170,18 +170,20 @@ public class volumeFragment extends Fragment implements View.OnClickListener{
         };
         textView_1.addTextChangedListener(textWatcher);
         textView_2.addTextChangedListener(textWatcher1);
+        Log.d(TAG, "onActivityCreated str_sp_before: " + str_sp_before);
+        Log.d(TAG, "onActivityCreated str_sp_after: " + str_sp_after);
     }
 
     @Override
-    public void onClick(View view){
+    public void onClick(View view) {
         int id = view.getId();
         Button button = view.findViewById(id);
         String button_text = button.getText().toString();
 
-        if (id == R.id.vol_btn_ce) {
+        if (id == R.id.len_btn_ce) {
             expression = "0";
             ctrl_point = true;
-        } else if (id == R.id.vol_btn_point) {
+        } else if (id == R.id.len_btn_point) {
             if (ctrl_point) {
                 expression += ".";
                 ctrl_point = false;
@@ -194,4 +196,5 @@ public class volumeFragment extends Fragment implements View.OnClickListener{
         }
         textView_1.setText(expression);
     }
+
 }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="array_length">
-        <item>微米</item>
         <item>毫米</item>
         <item>厘米</item>
         <item>米</item>

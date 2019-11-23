@@ -9,13 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".help"></activity>
+        <activity android:name=".my"></activity>
+        <activity android:name=".calculator.help" />
         <activity android:name=".volume.volumeFragment" />
         <activity android:name=".system.systemFragment" />
-        <activity android:name=".length.lengthFragment" />
-        <activity android:name=".calculator.calculatorFragment" />
+        <activity android:name="com.example.calculator.calculator.length.lengthFragment" />
+        <activity android:name=".calculator.calculator.calculatorFragment" />
         <activity
-            android:name=".MainActivity"
+            android:name=".calculator.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

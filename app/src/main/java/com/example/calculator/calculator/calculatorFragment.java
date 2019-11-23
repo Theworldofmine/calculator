@@ -15,12 +15,9 @@ import android.widget.ImageButton;
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.example.calculator.R;
-import com.example.calculator.calculator.calculate;
+import com.example.utils.Calculate;
 
 import java.lang.reflect.Method;
 
@@ -49,7 +46,7 @@ public class calculatorFragment extends Fragment implements View.OnClickListener
     private boolean ctrl_point = true;
     private String exp = "";
     //实例化自定义计算器对象
-    private calculate calculate = new calculate();
+    private Calculate calculate = new Calculate();
     private int screenOrientation;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
