@@ -23,9 +23,9 @@ import com.example.calculator.R;
 import com.example.utils.Convertsys;
 
 
-public class systemFragment extends Fragment implements View.OnClickListener{
-    private systemViewModel systemViewModel;
-    private static final String TAG = "systemFragment";
+public class SystemFragment extends Fragment implements View.OnClickListener{
+    private SystemViewModel systemViewModel;
+    private static final String TAG = "SystemFragment";
     //转换的数值
     private TextView textView_1, textView_2;
     //表达式
@@ -49,7 +49,7 @@ public class systemFragment extends Fragment implements View.OnClickListener{
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        systemViewModel = ViewModelProviders.of(this).get(com.example.calculator.system.systemViewModel.class);
+        systemViewModel = ViewModelProviders.of(this).get(SystemViewModel.class);
         View root = inflater.inflate(R.layout.fragment_system, container, false);
         return root;
     }

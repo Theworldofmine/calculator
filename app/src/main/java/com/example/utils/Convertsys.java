@@ -2,8 +2,6 @@ package com.example.utils;
 
 import android.util.Log;
 
-import java.math.BigDecimal;
-
 public class Convertsys {
     private String num, result;
     private String dwa, dwb;
@@ -12,7 +10,7 @@ public class Convertsys {
     private String octal = "八进制";
     private String ten = "十进制";
     private String hex = "十六进制";
-    private static final String TAG = "ConvertSys";
+    private static final String TAG = "Convertsys";
 
     public Convertsys() {
 

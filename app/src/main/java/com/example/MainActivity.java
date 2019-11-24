@@ -1,4 +1,4 @@
-package com.example.calculator;
+package com.example;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +14,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.example.calculator.R;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.main_calculator, R.id.main_volume, R.id.main_length, R.id.main_system)
+                R.id.nav_home, R.id.nav_volume, R.id.nav_length, R.id.nav_system)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -43,13 +44,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.nav, menu);
         return true;
     }
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_help:
-                Intent intent =new Intent(MainActivity.this,help.class);
+                Intent intent =new Intent(MainActivity.this, help.class);
                 startActivity(intent);
         }
         return super.onOptionsItemSelected(item);

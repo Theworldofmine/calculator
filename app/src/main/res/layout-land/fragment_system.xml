@@ -31,6 +31,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:entries="@array/array_sys"
+        style="@style/common_spinner"
+        android:popupTheme="@style/common_spinner"
         android:layout_marginLeft="45dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sys_textView_1" />
@@ -40,7 +42,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:entries="@array/array_sys"
-
+        style="@style/common_spinner"
+        android:popupTheme="@style/common_spinner"
         android:layout_marginLeft="45dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sys_textView_2" />

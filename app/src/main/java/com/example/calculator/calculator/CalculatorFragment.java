@@ -12,8 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.calculator.R;
@@ -21,8 +21,8 @@ import com.example.utils.Calculate;
 
 import java.lang.reflect.Method;
 
-public class calculatorFragment extends Fragment implements View.OnClickListener{
-    private static final String TAG = "HomeFragment";
+public class CalculatorFragment extends Fragment implements View.OnClickListener{
+    private static final String TAG = "CalculatorFragment";
     private static final String EXPRESSION = "0";
 
     //Button数组，存放activity的buttons
@@ -52,7 +52,7 @@ public class calculatorFragment extends Fragment implements View.OnClickListener
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         Log.d(TAG, "onCreateView: homeFragment's create");
-        View root = inflater.inflate(R.layout.fragment_calculator, container, false);
+        View root = inflater.inflate(R.layout.fragment_home, container, false);
         //禁止显示系统自带键盘
         disableShowSoftInput();
         return root;

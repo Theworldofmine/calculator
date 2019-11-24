@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.calculator.calculator.calculatorFragment"
+        android:name="com.hwhhhh.calculator.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_calculator" />
+        tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_volume"
-        android:name="com.example.calculator.volume.volumeFragment"
+        android:name="com.hwhhhh.calculator.ui.volume.VolumeFragment"
         android:label="@string/menu_volume"
         tools:layout="@layout/fragment_volume" />
 
     <fragment
         android:id="@+id/nav_length"
-        android:name="com.example.calculator.length.lengthFragment"
+        android:name="com.hwhhhh.calculator.ui.Length.LengthFragment"
         android:label="@string/menu_length"
         tools:layout="@layout/fragment_length" />
 
     <fragment
         android:id="@+id/nav_system"
-        android:name="com.example.calculator.system.systemFragment"
+        android:name="com.hwhhhh.calculator.ui.system.SystemFragment"
         android:label="@string/menu_system"
         tools:layout="@layout/fragment_system"/>
 </navigation>

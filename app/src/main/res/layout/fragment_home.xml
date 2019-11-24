@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".calculator.CalculatorFragment">
+    android:layout_height="match_parent">
+
 
     <EditText
         android:id="@+id/editText"
@@ -206,5 +206,4 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/button_point"
         />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

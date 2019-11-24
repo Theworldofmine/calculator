@@ -1,17 +1,16 @@
-package com.example.calculator.calculator;
+package com.example.utils;
 
 import android.util.Log;
 
 import java.math.BigDecimal;
 import java.util.LinkedList;
-
 import java.util.Stack;
 
-public class calculate {
+public class Calculate {
     String exp;
     //判断是否是负数
     private static final String TAG = "Calculate";
-    public calculate() {
+    public Calculate() {
     }
     //计算左右括号
     private int leftKh = 0, rightKh = 0;
@@ -110,10 +109,10 @@ public class calculate {
                 } else { //其他情况优先级低或相同
                     while ( !list_oper.isEmpty() && (!(str.matches("(\\*)|(\\/)")
                             && list_oper.getLast().matches("(\\+)|(\\-)")))) {
-                        list_suffix.add(list_oper.removeLast());
-                        if (list_oper.isEmpty()||list_oper.getLast().equals("(")) {
-                            break;
-                        }
+                            list_suffix.add(list_oper.removeLast());
+                            if (list_oper.isEmpty()||list_oper.getLast().equals("(")) {
+                                break;
+                            }
                     }
                     list_oper.add(str);
                 }

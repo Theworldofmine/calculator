@@ -4,11 +4,11 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class calculatorViewModel extends ViewModel {
+public class CalculatorViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public calculatorViewModel() {
+    public CalculatorViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("This is home fragment");
     }

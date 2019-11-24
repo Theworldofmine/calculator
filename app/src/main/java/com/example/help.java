@@ -1,14 +1,17 @@
-package com.example.calculator;
+package com.example;
+
+import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
+import com.example.calculator.R;
 
 public class help extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.help_activity);
+        setContentView(R.layout.help);
     }
+
 }

@@ -22,10 +22,10 @@ import androidx.lifecycle.ViewModelProviders;
 import com.example.calculator.R;
 import com.example.utils.Convertvol;
 
-public class volumeFragment extends Fragment implements View.OnClickListener{
+public class VolumeFragment extends Fragment implements View.OnClickListener{
 
-    private volumeViewModel volumeViewModel;
-    private static final String TAG = "volumeFragment";
+    private VolumeViewModel volumeViewModel;
+    private static final String TAG = "VolumeFragment";
     //转换的数值
     private TextView textView_1, textView_2;
     //表达式
@@ -45,7 +45,7 @@ public class volumeFragment extends Fragment implements View.OnClickListener{
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         volumeViewModel =
-                ViewModelProviders.of(this).get(volumeViewModel.class);
+                ViewModelProviders.of(this).get(VolumeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_volume, container, false);
         return root;
     }

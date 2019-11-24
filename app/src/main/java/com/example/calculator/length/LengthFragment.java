@@ -21,9 +21,9 @@ import androidx.fragment.app.Fragment;
 import com.example.calculator.R;
 import com.example.utils.Convertlen;
 
-public class lengthFragment extends Fragment implements View.OnClickListener{
+public class LengthFragment extends Fragment implements View.OnClickListener{
 
-    private lengthViewModel lengthViewModel;
+    private LengthViewModel lengthViewModel;
 
     //按钮的id
     private int[] button_ids = new int[]{
@@ -44,7 +44,7 @@ public class lengthFragment extends Fragment implements View.OnClickListener{
     private Spinner spinner_after;
     private String str_sp_after = "厘米";
     private Convertlen translateLength;
-    private static final String TAG = "lengthFragment";
+    private static final String TAG = "LengthFragment";
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {

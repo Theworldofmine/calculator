@@ -1,10 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".length.lengthFragment">
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/len_textView_1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        style="@style/textViewTextSize"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/spinner_first" />
+
+    <TextView
+        android:id="@+id/len_textView_2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        style="@style/textViewTextSize"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/spinner_second" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinner_first"
+        style="@style/common_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="120dp"
+        android:entries="@array/array_length"
+        android:popupTheme="@style/common_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinner_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/array_length"
+        style="@style/common_spinner"
+        android:popupTheme="@style/common_spinner"
+        android:layout_marginTop="120dp"
+        android:layout_marginRight="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/len_btn_point"
         style="@style/buttonStyle"
@@ -108,7 +155,7 @@
         app:layout_constraintStart_toEndOf="@id/len_btn_8"
         app:layout_constraintBottom_toTopOf="@id/len_btn_6"
         app:layout_constraintEnd_toStartOf="@id/len_btn_del"
-        />
+    />
 
     <ImageButton
         android:id="@+id/len_btn_del"
